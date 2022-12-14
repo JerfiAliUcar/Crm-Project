@@ -1,21 +1,13 @@
 ﻿using AspNetMvc.Crm.Domain.Entities;
+using AspNetMvc.Framework.Repository;
 
 namespace AspNetMvc.Crm.Domain.Repositories
 {
-    public interface IEmployeeRepository
+    //IRepository içine generic olarak Customer verildi.
+    //<TEntity> yerine <Employee> gönderildi.
+    public interface IEmployeeRepository : IRepository<Employee>
     {
-        public List<Employee> GetAll();
-
-        public Employee GetById(int id);
-
-        public bool Insert(Employee employee);
-
-        public bool Update(Employee employee);
-
-        public bool Delete(Employee employee);
-
-        public bool DeleteById(int id);
-
+        
         public List<Employee> GetAllByRegionId(int regionId);
     }
 }
