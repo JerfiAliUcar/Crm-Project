@@ -1,5 +1,5 @@
+using AspNetMvc.Crm.Application;
 using AspNetMvc.Crm.EntityFramework;
-using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,8 +10,11 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-
+//ServiceRegistrations içinde oluþturduðumuz extension metodu çaðýrarak DB Konfig. yapýldý.(AddTransient Repository kýsmýný da Aldýk)
 builder.Services.AddEntityFrameworkRegistration(builder.Configuration);
+
+//Application kýsmýndaki Service Registrrations içinde oluþturduðumuz extension metodu çaðýrarak AddTransient Service kýsýmýný aldýk
+builder.Services.AddApplicationRegistration(builder.Configuration);
 
 var app = builder.Build();
 

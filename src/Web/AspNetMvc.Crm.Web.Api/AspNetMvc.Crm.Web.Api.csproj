@@ -15,6 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\Core\AspNetMvc.Crm.Application\AspNetMvc.Crm.Application.csproj" />
     <ProjectReference Include="..\..\Infrastructure\AspNetMvc.Crm.EntityFramework\AspNetMvc.Crm.EntityFramework.csproj" />
   </ItemGroup>
 

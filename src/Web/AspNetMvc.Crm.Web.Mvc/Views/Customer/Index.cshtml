@@ -1,0 +1,6 @@
+﻿@model List<CustomerDto>
+
+    @foreach(var customer in Model){
+        <h1>@customer.CompanyName</h1>
+        <p>@customer.UserId</p>
+    }

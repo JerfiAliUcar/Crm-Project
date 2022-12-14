@@ -1,7 +1,16 @@
+using AspNetMvc.Crm.Application;
+using AspNetMvc.Crm.EntityFramework;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+//ServiceRegistrations içinde oluþturduðumuz extension metodu çaðýrarak DB Konfig. yapýldý.
+builder.Services.AddEntityFrameworkRegistration(builder.Configuration);
+
+//Application kýsmýndaki Service Registrrations içinde oluþturduðumuz extension metodu çaðýrarak AddTransient Service kýsýmýný aldýk
+builder.Services.AddApplicationRegistration(builder.Configuration);
 
 var app = builder.Build();
 

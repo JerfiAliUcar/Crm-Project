@@ -6,4 +6,13 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Infrastructure\AspNetMvc.Crm.EntityFramework\AspNetMvc.Crm.EntityFramework.csproj" />
+    <ProjectReference Include="..\AspNetMvc.Crm.Domain\AspNetMvc.Crm.Domain.csproj" />
+  </ItemGroup>
+
 </Project>
