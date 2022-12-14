@@ -1,14 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace AspNetMvc.Framework.Entity
 {
-    public abstract class BaseEntity
+    public abstract class BaseEntity<TKey>
     {
-        public int Id { get; set; }
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public TKey Id { get; set; }
     }
 
+    //varsayılan olarak int tipinde Id kullansın.
+    //özel bir durumda int yerine başka bir tip kullanılabilsin diye TKEy yaparak genericleştirdik.
+    public abstract class BaseEntity : BaseEntity<int>
+    {
+    }
 }

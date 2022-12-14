@@ -1,20 +1,10 @@
 ﻿using AspNetMvc.Crm.Domain.Entities;
+using AspNetMvc.Framework.Repository;
 
 namespace AspNetMvc.Crm.Domain.Repositories
 {
-    public interface ICustomerRepository
+    public interface ICustomerRepository : IRepository<Customer>
     {
-        public List<Customer> GetAll();
-
-        public Customer GetById(int id);
-
-        public bool Insert(Customer customer);
-
-        public bool Update(Customer customer);
-
-        public bool Delete(Customer customer);
-
-        public bool DeleteById(int id);
 
         public List<Customer> GetAllByRegionId(int regionId);
     }
