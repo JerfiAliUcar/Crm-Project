@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using AspNetMvc.Crm.Domain.Entities;
+using Microsoft.EntityFrameworkCore;
 
 namespace AspNetMvc.Crm.EntityFramework
 {
@@ -13,6 +14,15 @@ namespace AspNetMvc.Crm.EntityFramework
         {
 
         }
+
+        public DbSet<Employee> Employees { get; set; }
+        public DbSet<Customer> Customers { get; set; }
+        //public DbSet<User> Users { get; set; }
+        //public DbSet<Gender> Genders { get; set; }
+        //public DbSet<Department> Departments { get; set; }
+        //public DbSet<StatusType> StatusTypes { get; set; }
+        //public DbSet<Region> Regions { get; set; }
+
 
         protected override void OnConfiguring(DbContextOptionsBuilder builder)
         {
