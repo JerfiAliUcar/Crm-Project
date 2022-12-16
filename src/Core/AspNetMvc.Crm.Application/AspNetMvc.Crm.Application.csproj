@@ -15,4 +15,8 @@
     <ProjectReference Include="..\AspNetMvc.Crm.Domain\AspNetMvc.Crm.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Dtos\Task\" />
+  </ItemGroup>
+
 </Project>

@@ -1,8 +1,9 @@
-﻿namespace AspNetMvc.Crm.Application.Dtos
+﻿using AspNetMvc.Framework.Dtos;
+
+namespace AspNetMvc.Crm.Application.Dtos.Customer
 {
-    public class CreateOrUpdateCustomerDto
+    public class CreateOrUpdateCustomerDto : BaseDto
     {
-        public int Id { get; set; }
 
         public int? UserId { get; set; }
 

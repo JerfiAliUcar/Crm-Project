@@ -14,9 +14,10 @@ namespace AspNetMvc.Crm.EntityFramework
         {
 
         }
-
         public DbSet<Employee> Employees { get; set; }
         public DbSet<Customer> Customers { get; set; }
+        public DbSet<Request> Requests { get; set; }
+
         //public DbSet<User> Users { get; set; }
         //public DbSet<Gender> Genders { get; set; }
         //public DbSet<Department> Departments { get; set; }

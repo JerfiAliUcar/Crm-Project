@@ -1,10 +1,10 @@
-﻿using AspNetMvc.Framework.Entity;
+﻿using AspNetMvc.Framework.Dtos;
+using AspNetMvc.Framework.Entity;
 
-namespace AspNetMvc.Crm.Application.Dtos
+namespace AspNetMvc.Crm.Application.Dtos.Customer
 {
-    public class CustomerDto
+    public class CustomerDto : BaseDto
     {
-        public int Id { get; set; }
 
         public int? UserId { get; set; }
 

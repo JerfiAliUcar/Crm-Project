@@ -1,4 +1,5 @@
-﻿using AspNetMvc.Crm.Application.Dtos;
+﻿using AspNetMvc.Crm.Application.Dtos.Customer;
+using AspNetMvc.Crm.Application.Dtos.Employee;
 using AspNetMvc.Crm.Application.Services.Abstracts;
 using AspNetMvc.Crm.Domain.Entities;
 using AspNetMvc.Crm.Domain.Repositories;

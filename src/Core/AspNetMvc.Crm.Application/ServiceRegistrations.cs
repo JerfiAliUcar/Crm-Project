@@ -16,6 +16,7 @@ namespace AspNetMvc.Crm.Application
         public static void AddApplicationRegistration(this IServiceCollection services, IConfiguration configuration)
         {
             services.AddTransient<ICustomerService, CustomerService>();
+            services.AddTransient<IEmployeeService, EmployeeService>();
 
             //AutoMapper Konfigürasyonu burada yapacağız. Bu kod ile MappingProfile'ı ayarlıyoruz.
             //services.AddAutoMapper(typeof(MappingProfile));
