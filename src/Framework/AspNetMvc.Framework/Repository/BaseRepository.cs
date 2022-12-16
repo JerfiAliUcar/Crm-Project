@@ -3,11 +3,11 @@ using Microsoft.EntityFrameworkCore;
 
 namespace AspNetMvc.Framework.Repository
 {
-    public class BaseRepository<TEntity,TDbContext>:IRepository<TEntity>
+    public abstract class BaseRepository<TEntity,TDbContext>:IRepository<TEntity>
         where TDbContext : DbContext
         where TEntity : BaseEntity
         //where komutu generic olarak gönderdiğimiz TEntity ve TContext'in türünün ne olduğunu belirtmemize yarar.
-        //TEntity'in BaseEntity'den türemiş olması gerektiğini belirtiyoruz.
+        //TEntity'in BaseEntity'den türemiş olması gerektiğini belirtiyoruz.(sonradan class olarak değiştirdim)
         //TContext'in DbContext'den türemiş olması gerektiğini belirtiyoruz. Böylece Set gibi komutları kullanabiliriz.
     {
         private readonly TDbContext _db;

@@ -18,6 +18,7 @@ namespace AspNetMvc.Crm.EntityFramework
             //services.AddDbContext<AppDbContext>();
 
             services.AddTransient<ICustomerRepository, CustomerRepository>();
+            services.AddTransient<IEmployeeRepository, EmployeeRepository>();
 
         }
     }

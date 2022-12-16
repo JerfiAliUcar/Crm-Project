@@ -1,4 +1,5 @@
-﻿@model List<CustomerDto>
+﻿@using AspNetMvc.Crm.Application.Dtos.Customer;
+@model List<CustomerDto>
 
     @foreach(var customer in Model){
         <h1>@customer.CompanyName</h1>
