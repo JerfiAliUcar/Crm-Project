@@ -17,18 +17,6 @@ namespace AspNetMvc.Crm.Web.Api.Controllers
             _customerService = customerService;
         }
 
-        //[HttpGet]
-        //public List<Customer> Get()
-        //{
-        //    return _customerService.GetAllCustomers();
-        //}
 
-        //[HttpGet("{id}")]
-        //public IActionResult Get(int id)
-        //{
-        //    var data = _customerService.GetCustomerById(id);
-
-        //    return Ok(data);
-        //}
     }
 }

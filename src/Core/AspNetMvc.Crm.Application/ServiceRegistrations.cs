@@ -3,6 +3,7 @@ using AspNetMvc.Crm.Application.Mappings;
 using AspNetMvc.Crm.Application.Services;
 using AspNetMvc.Crm.Application.Services.Abstracts;
 using AspNetMvc.Crm.Domain.Entities;
+using AspNetMvc.Crm.Domain.Repositories;
 using AutoMapper;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -17,6 +18,8 @@ namespace AspNetMvc.Crm.Application
         {
             services.AddTransient<ICustomerService, CustomerService>();
             services.AddTransient<IEmployeeService, EmployeeService>();
+            services.AddTransient<IRequestService, RequestService>();
+            services.AddTransient<IUserService, UserService>();
 
             //AutoMapper Konfigürasyonu burada yapacağız. Bu kod ile MappingProfile'ı ayarlıyoruz.
             //services.AddAutoMapper(typeof(MappingProfile));
